@@ -1,0 +1,637 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+// var
+$mobile: 576px;
+$tablet: 768px;
+$dekstop: 1024px;
+
+#img {
+    background-image: url(../image/Optimized-page.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0%;
+    padding: 0%;
+}
+
+.texto {
+    text-align: center;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 0%;
+
+    .texto-1 {
+        padding: 2vh;
+        margin-left: 320px;
+        margin-top: 20px;
+        width: 50%;
+        font-size: 4em;
+        margin-bottom: 150px;
+        text-align: center;
+        border-bottom: solid white;
+    }
+
+    .texto-2 {
+        font-size: 3.5em;
+        margin-top: 30px;
+        padding: 4vh;
+    }
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 80px;
+    background-color: #D784D9;
+    color: #fff;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 3s ease all;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    & span {
+        position: relative;
+        z-index: 2;
+        transition: .3s ease all;
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #464573;
+        position: absolute;
+        z-index: 1;
+        top: -88px;
+        left: 0%;
+        transition: .3s ease-in-out;
+    }
+
+    &:hover::after {
+        top: 0%;
+    }
+
+    & a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+@media (min-width:$mobile) {
+    .boton {
+        margin-left: 38%;
+    }
+}
+
+@media screen and (min-width:400px) {
+    .boton {
+        margin-left: 12vh;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+        width: 100%;
+    }
+
+    .contenedor .botones {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 0 5px;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        box-shadow: 0 10px 10px rgb(29, 28, 28);
+        transition: all .3s ease-out;
+
+        &.icono {
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            line-height: 60px;
+            text-align: center;
+        }
+
+        & a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    .texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .texto-2 {
+            font-size: 2.5em;
+            display: inline;
+
+        }
+
+        .texto-1 {
+            margin-left: 25%;
+            font-size: 3em
+        }
+
+        .contenedor .botones:hover {
+            width: 80px
+        }
+
+        .contenedor {
+            margin-right: 25px;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    width: 100%;
+}
+
+.contenedor {
+
+    .botones {
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 0 5px;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        box-shadow: 0 10px 10px rgb(29, 28, 28);
+        transition: all .3s ease-out;
+
+        :hover {
+            width: 200px;
+        }
+
+        .icono {
+            display: inline-flex;
+            justify-content: center;
+            height: 60px;
+            width: 60px;
+            border-radius: 50px;
+            box-sizing: border-box;
+            line-height: 60px;
+            text-align: center;
+            transition: all .3s ease-out;
+        }
+
+        & {
+            font-size: 25px;
+            line-height: 60px;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 60px;
+            margin-left: 10px;
+        }
+
+        & a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}
+
+@media (min-width:$dekstop) {
+    .texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .texto-2 {
+        font-size: 3em;
+        margin-top: 30px;
+        padding: 2vh;
+    }
+
+    .texto-1 {
+        font-size: 4em;
+        margin-bottom: 150px;
+        text-align: center;
+        border-bottom: solid white;
+    }
+
+    .boton {
+        margin-left: 43%;
+    }
+
+    .contenedor .botones:hover {
+        width: 200px;
+    }
+
+    .contenedor {
+        margin-left: 45px;
+        margin-top: 150px
+    }
+}
+
+#img-ser {
+    background-image: url(../image/Optimized-page2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .titulo-s {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 0%;
+        color: #fff;
+    }
+
+    .card1 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 400px;
+        margin-bottom: 20px;
+        height: 90vh;
+    }
+
+    & img {
+        width: 375px;
+        height: 330px;
+        object-fit: cover;
+
+    }
+
+    .card-body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+
+    }
+}
+
+@media(min-width:400px) {
+    #img-ser .card1 {
+        height: 60vh;
+    }
+
+    .card1 {
+        line-height: 16.5px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .card1 img {
+        width: 175px;
+        height: 130px;
+    }
+
+}
+
+@media (min-width:$dekstop) {
+    #img-ser .card1 {
+        height: 90vh;
+    }
+}
+
+#img-suple {
+    background-color: white;
+
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .card-body {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.titulo-nuestro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card2 {
+    display: grid;
+    grid-template-columns: 33% 33%;
+
+    img {
+        height: 300px;
+        width: 400px;
+    }
+
+    .card-body {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.card3 {
+    display: grid;
+    grid-template-columns: 33%;
+
+    img {
+        height: 300px;
+        width: 400px;
+    }
+
+    .card-body {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width:400px) {
+    .card2 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-column: 1/2;
+    }
+
+    .card3 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-column: 1/2;
+    }
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: stretch;
+    width: 80%;
+    margin: auto;
+
+    & img {
+        width: 100%;
+    }
+
+    .cambio1 {
+        grid-column: 1/2;
+    }
+
+    .cambio2 {
+        grid-column: 2/3;
+    }
+
+    .cambio3 {
+        grid-column: 3/4;
+    }
+
+    .cambio4 img {
+        width: 100%;
+        height: 450px;
+        border-radius: 200px;
+    }
+
+    .cambio4 {
+        grid-column: 1/4;
+    }
+
+    .cambio5 {
+        grid-column: 1/2;
+    }
+
+    .cambio6 {
+        grid-column: 2/3;
+    }
+
+    .combio7 {
+        grid-column: 3/4;
+    }
+
+    .cambio8 img {
+        height: 450px;
+        width: 100%;
+        border-radius: 200px;
+    }
+
+    .cambio8 {
+        grid-column: 1/4;
+    }
+
+    .cambio9 {
+        grid-column: 1/2;
+    }
+
+    .cambio10 {
+        grid-column: 2/3;
+    }
+
+    .cambio11 {
+        grid-column: 3/4;
+    }
+}
+
+@media (max-width:$mobile) {
+    .inicio-cambios {
+        background-color: black;
+
+        .texto-cambios {
+            color: #fff;
+            text-align: center;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 100%;
+            justify-content: center;
+            width: 80%;
+            margin: auto;
+        }
+
+        .cambio1 {
+            grid-column: 1/4;
+        }
+
+        .cambio2 {
+            grid-column: 1/4;
+        }
+
+        .cambio3 {
+            grid-column: 1/4;
+        }
+
+        .cambio4 {
+            display: none;
+        }
+
+        .cambio5 {
+            grid-column: 1/4;
+        }
+
+        .cambio6 {
+            grid-column: 1/4;
+        }
+
+        .cambio7 {
+            grid-column: 1/4;
+        }
+
+        .cambio8 img {
+            display: none;
+        }
+
+        .cambio9 {
+            grid-column: 1/4;
+        }
+
+        .cambio10 {
+            grid-column: 1/4;
+        }
+
+        .cambio11 {
+            grid-column: 1/4;
+        }
+    }
+}
+
+.inicio-contacto {
+    background-image: url(../image/page5.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0%;
+    padding: 0%;
+
+    .contacto {
+        color: rgb(255, 255, 204);
+        text-align: center;
+        font-size: 1.5em;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+
+    .formulario {
+        height: 80vh;
+        width: 600px;
+        font-size: 1em;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: auto;
+        padding: 5px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        color: white;
+
+        & h1 {
+            font-size: 1.5em;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-bottom: 4px;
+            margin-top: 0%;
+            padding: 0%;
+        }
+    }
+
+    .controls {
+        display: block;
+        font-size: 1em;
+        height: 40px;
+        width: 400px;
+        margin-top: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .button {
+        display: block;
+        font-size: 1em;
+        width: 400px;
+        height: 50px;
+        margin-top: 20px;
+        background-color: #F29727;
+        border-radius: 10px;
+    }
+
+    #servi {
+        font-size: 1em;
+        margin-top: 20px;
+        height: 50px;
+        width: 400px;
+        background-color: #F29727;
+        text-align: center;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width:400px) {
+    .formulario {
+        margin-top: 80px;
+    }
+
+    .controls {
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        height: 40px;
+        width: 100px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    .button {
+        display: block;
+        font-size: 1em;
+        width: 100px;
+        height: 50px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    #servi {
+        font-size: 1em;
+        margin-top: 20px;
+        height: 50px;
+        width: 100px;
+        text-align: center;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width:$dekstop) {
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
